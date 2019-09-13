@@ -5,8 +5,6 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
-const getSlides = () => Array.from(document.querySelectorAll('.slideshow'))
-
 const reset = slides => {
   slides.forEach((slide, i) => {
     slide.classList.remove('show')
@@ -33,11 +31,11 @@ const next = slides => {
 }
 
 const Slides = ({ stage }) => {
-  const slides = useRef(getSlides())
+  const slides = useRef(null)
   const slideShowInterval = useRef(0)
 
   useEffect(() => {
-    slides.current = getSlides()
+    slides.current = Array.from(document.querySelectorAll('.slideshow'))
 
     reset(slides.current)
     slideShowInterval.current = setInterval(() => next(slides.current), 3000)
