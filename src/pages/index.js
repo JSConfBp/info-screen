@@ -27,9 +27,6 @@ const IndexPage = props => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-
-    
-
     /* 
     fetch(API_URL, {
       mode: 'no-cors',
