@@ -1,0 +1,86 @@
+:root {
+	--speaker-text: calc(calc(100vw * var(--screen-ratio)) / 100);
+	--speaker-text-transition: 1.4s;
+}
+
+
+.speaker-info {
+	color: white;
+
+	.event-css &,
+	.white &,
+	.yellow & {
+		color: black;
+		border-left: .1rem solid #00000044;
+	}
+}
+
+.speaker-info {
+	position: absolute;
+	z-index: 5;
+	padding-left: 2rem;
+	border-left: .2rem solid #ffffff44;
+
+	& .name,
+	& .topic {
+		display: block;
+	}
+
+	& .name {
+		font-weight: 700;
+		transition: font-size .4s;
+	}
+
+	.event-css & .name {
+		text-transform: uppercase;
+	}
+
+	& .topic {
+		font-weight: 200;
+		transition: font-size .4s;
+	}
+
+	transition:
+		top var(--speaker-text-transition),
+		left var(--speaker-text-transition),
+		transform  var(--speaker-text-transition),
+		padding-left  var(--speaker-text-transition),
+		color var(--color-transition);
+}
+
+.speaker-info {
+	top: -50%;
+	left: 34%;
+	width: 32%;
+
+	& .name {
+		padding-bottom: calc( 2.5 * var(--speaker-text));
+		font-size: calc( 6 * var(--speaker-text));
+	}
+
+	& .topic {
+		font-size: calc( 4.6 * var(--speaker-text));
+		line-height: calc( 5.8 * var(--speaker-text));
+		opacity: .7;
+	}
+
+
+	&.show-speaker-info {
+		top: 35%;
+	}
+}
+
+.presentation-active .speaker-info {
+	top: 22%;
+	left: 6%;
+	transform: scale(.66);
+	padding-left: 1rem;
+
+	& .name {
+		opacity: .8;
+	}
+
+	& .topic {
+		opacity: .6;
+	}
+}

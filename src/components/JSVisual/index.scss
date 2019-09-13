@@ -1,0 +1,21 @@
+@import '../../colors.scss';
+
+
+.js-bg {
+	height: 70%;
+	position: absolute;
+
+	polygon,
+	path {
+		fill: darken($color-red, 10%);
+	}
+}
+
+.js-bg-top {
+	top: 0;
+	left: 0;
+}
+.js-bg-bottom {
+	bottom: 0;
+	right: 0;
+}
