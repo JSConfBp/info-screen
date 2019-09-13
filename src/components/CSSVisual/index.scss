@@ -17,10 +17,6 @@
 	z-index: 10;
 	opacity: 1;
 
-	polygon,
-	path {
-	//	fill: darken($color-red, 10%);
-	}
 }
 
 .css-bg-top {
@@ -38,12 +34,20 @@
 
 }
 .css-bg-bottom {
-	bottom: 0;
 	left: 0;
+
 	transform-origin: bottom left;
 	transform: scale(1.3);
 
 	path {
 		fill: #F05D5E;
+	}
+
+
+	bottom: -5vh;
+
+
+	.rotate90 & {
+		bottom: -5vw;
 	}
 }
