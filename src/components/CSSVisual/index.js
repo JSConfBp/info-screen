@@ -14,17 +14,15 @@ const CSSVisual = ({ presentation, midSlide }) => {
   return (
     <>
       <svg
-        className="css-bg"
+        className="css-bg css-bg-bottom"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
         viewBox="0 0 1080 1920"
       >
-        <g>
           <g>
             <path
-              class="st1"
               d="M1007.6,1770.6c-20.3-20.5-53.4-20.5-73.9,0l-75,75c-12.3,9.5-30,8.6-41-2.6c-12.1-12.1-12.1-31.9,0-44.2
               l84.1-84.1c17.7-20.5,16.8-51.5-2.6-71.1c-20.3-20.5-53.4-20.5-73.9,0l-93.4,93.4c-0.7,0.7-1.6,1.6-2.3,2.3l-74.5,74.5
               c-20.5,20.5-53.4,20.5-73.9,0c-20.5-20.3-20.5-53.4,0-73.9l24.2-24.2c8.9-10.3,8.6-25.8-1.2-35.6c-10.2-10.3-26.6-10.3-37,0
@@ -35,13 +33,23 @@ const CSSVisual = ({ presentation, midSlide }) => {
               C1027.9,1824.1,1027.9,1790.9,1007.6,1770.6z"
             />
           </g>
-          <path
-            id="Rectangle-3_1_"
-            class="st2"
+
+
+      </svg>
+      <svg
+        className="css-bg css-bg-top"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1080 1920"
+      >
+        <g>
+        <path
             d="M107.9,54.6L253.6-91.2c31.9-31.9,83.8-31.9,115.5,0l0,0c31.9,31.9,31.9,83.8,0,115.5
             L223.3,170.1c-31.9,31.9-83.8,31.9-115.5,0l0,0C76,138.4,76,86.7,107.9,54.6z"
           />
-        </g>
+          </g>
       </svg>
       <div className="background"></div>
     </>

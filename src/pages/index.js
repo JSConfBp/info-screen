@@ -27,7 +27,7 @@ const IndexPage = props => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-    /* 
+
     fetch(API_URL, {
       mode: 'no-cors',
       headers: {
@@ -37,10 +37,10 @@ const IndexPage = props => {
       .then(res => res.json())
       .then(res => console.log(res))
       .catch(e => console.error(e))
- */
+
 
     setStage({
-      event: 'js',
+      event: 'css',
       speaker: {
         id: 'damini',
         name: 'Damini Satya Kammakomati',
@@ -85,7 +85,7 @@ const IndexPage = props => {
   }, [false])
 
   return (
-    <div className="info-screen">
+    <div className={`info-screen event-${stage.event}`}>
       <Slides stage={stage} />
 
       {stage && stage.event === 'css' && (
