@@ -36,8 +36,6 @@ const Slides = ({ stage }) => {
   const slides = useRef(getSlides())
   const slideShowInterval = useRef(0)
 
-  console.log(stage)
-  /* 
   useEffect(() => {
     slides.current = getSlides()
 
@@ -47,7 +45,7 @@ const Slides = ({ stage }) => {
     return () => {
       clearInterval(slideShowInterval.current)
     }
-  }, [stage]) */
+  }, [stage])
 
   return (
     <div className={classnames('mid-session-slides')}>
@@ -113,7 +111,7 @@ const Slides = ({ stage }) => {
 
         <dl className="session-list">
           {stage.upcoming.map(session => (
-            <>
+            <React.Fragment key={session.topic}>
               <dd>14:40</dd>
               <dt>
                 {session.topic}
@@ -121,7 +119,7 @@ const Slides = ({ stage }) => {
                   <span className="session-name">by {session.name}</span>
                 )}
               </dt>
-            </>
+            </React.Fragment>
           ))}
         </dl>
       </div>

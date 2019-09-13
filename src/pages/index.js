@@ -23,6 +23,13 @@ const IndexPage = props => {
   useEffect(() => {
     console.log('useEffect init')
 
+    if (window.location.search.includes('akvarium')) {
+      document.querySelector('body').classList.add('rotate90')
+    }
+
+
+    
+
     /* 
     fetch(API_URL, {
       mode: 'no-cors',
