@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import classnames from 'classnames'
+import React, { useEffect, useState, useRef } from 'react'
 import fetch from 'isomorphic-unfetch'
 
 import JSVisual from '../components/JSVisual'
@@ -8,17 +7,22 @@ import Slides from '../components/Slides'
 import './index.scss'
 const API_URL = 'https://stage-control.herokuapp.com/api/stage'
 
-const emptyStage = {
-  speaker: {
-    name: '',
-    topic: '',
-  },
-}
-
 const IndexPage = props => {
+  const fetchInterval = useRef(0)
   const [stage, setStage] = useState({
     upcoming: [],
   })
+
+  const getStage = () => {
+    fetch(API_URL, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+      .then(res => setStage(res))
+      .catch(e => console.error(e))
+  }
 
   useEffect(() => {
     console.log('useEffect init')
@@ -27,16 +31,10 @@ const IndexPage = props => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-    fetch(API_URL, {
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(e => console.error(e))
+    getStage()
+    fetchInterval.current = setInterval(getStage, 30 * 1000)
 
+/*
     setStage({
       event: 'css',
       speaker: {
@@ -77,9 +75,11 @@ const IndexPage = props => {
           topic: 'Coffee break',
         },
       ],
-    })
+    }) */
 
-    return () => {}
+    return () => {
+      clearInterval(fetchInterval.current)
+    }
   }, [false])
 
   return (
