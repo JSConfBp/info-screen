@@ -5,6 +5,8 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
+const SLIDE_INTERVAL = 3000
+
 const reset = slides => {
   slides.forEach((slide, i) => {
     slide.classList.remove('show')
@@ -38,7 +40,7 @@ const Slides = ({ stage }) => {
     slides.current = Array.from(document.querySelectorAll('.slideshow'))
 
     reset(slides.current)
-    slideShowInterval.current = setInterval(() => next(slides.current), 3000)
+    slideShowInterval.current = setInterval(() => next(slides.current), SLIDE_INTERVAL)
 
     return () => {
       clearInterval(slideShowInterval.current)
@@ -47,23 +49,27 @@ const Slides = ({ stage }) => {
 
   return (
     <div className={classnames('mid-session-slides')}>
-      <div className="sponsors slideshow show">
+      <div className="sponsors slideshow ">
         <div className="sponsors-top">
           <SponsorImage image="mozilla" className="large" />
           <SponsorImage image="tresorit" className="large" />
           <SponsorImage image="vacuumlabs" className="large" />
           <SponsorImage image="oracle" className="large" />
         </div>
+
+      </div>
+      <div className="sponsors slideshow show">
+
         <div className="sponsors-mid">
           <SponsorImage image="blackrock" className="medium" />
           <SponsorImage image="instructure" className="medium" />
           <SponsorImage image="bonomi" className="medium" />
+          <SponsorImage image="supercharge" className="medium" />
           <SponsorImage image="microsoft" className="medium" />
           <SponsorImage image="risingstack" className="medium" />
-          <SponsorImage image="supercharge" className="medium" />
-          <SponsorImage image="sinnerschrader" className="medium" />
           <SponsorImage image="epam" className="medium" />
           <SponsorImage image="mito" className="medium" />
+          <SponsorImage image="sinnerschrader" className="medium" />
         </div>
         <div className="sponsors-bottom">
           <SponsorImage image="zalando" className="small" />

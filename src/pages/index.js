@@ -34,7 +34,7 @@ const IndexPage = props => {
     getStage()
     fetchInterval.current = setInterval(getStage, 30 * 1000)
 
-/*
+    /*
     setStage({
       event: 'css',
       speaker: {
