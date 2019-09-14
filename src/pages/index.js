@@ -27,7 +27,6 @@ const IndexPage = props => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-
     fetch(API_URL, {
       mode: 'no-cors',
       headers: {
@@ -37,7 +36,6 @@ const IndexPage = props => {
       .then(res => res.json())
       .then(res => console.log(res))
       .catch(e => console.error(e))
-
 
     setStage({
       event: 'css',
