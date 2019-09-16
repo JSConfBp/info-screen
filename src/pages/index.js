@@ -89,7 +89,7 @@ const IndexPage = props => {
       {stage && stage.event === 'css' && (
         <CSSVisual presentation={stage.presentation} />
       )}
-      {stage && stage.event === 'js' && (
+      {stage && stage.event && stage.event.startsWith('js') && (
         <JSVisual presentation={stage.presentation} />
       )}
     </div>

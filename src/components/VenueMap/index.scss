@@ -1,7 +1,32 @@
+@import '../../colors.scss';
+
 .venue-map {
 	position: absolute;
-	width: 120%;
+	width: 100%;
 	height: 100%;
 	top: 0;
-	transform: translate(-20%, 0);
+
+}
+
+
+.st0 {
+	fill:#000;
+}
+
+
+.icon {
+	.event-css & {
+		fill:$color-salmon;
+	}
+	.event-js1 &,
+	.event-js2 & {
+		fill:$color-red;
+	}
+}
+.icon.exit {
+	fill:$color-green;
+}
+
+.st1 {
+	fill:none;
 }

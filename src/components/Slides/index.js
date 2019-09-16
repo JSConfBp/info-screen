@@ -44,7 +44,7 @@ const Slides = ({ stage }) => {
       () => next(slides.current),
       SLIDE_INTERVAL
     )
-
+ 
     return () => {
       clearInterval(slideShowInterval.current)
     }
@@ -60,7 +60,7 @@ const Slides = ({ stage }) => {
           <SponsorImage image="oracle" className="large" />
         </div>
       </div>
-      <div className="sponsors slideshow show">
+      <div className="sponsors slideshow ">
         <div className="sponsors-mid">
           <SponsorImage image="blackrock" className="medium" />
           <SponsorImage image="instructure" className="medium" />
@@ -107,7 +107,7 @@ const Slides = ({ stage }) => {
         <h1>password</h1>
       </div>
 
-      <div className="venue slideshow">
+      <div className="venue slideshow show">
         <VenueMap />
       </div>
 
