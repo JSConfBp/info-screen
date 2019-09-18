@@ -84,10 +84,12 @@
 	}
 
 	.slideshow {
+		transition: .3s opacity;
 		opacity: 0;
 
 		&.show {
 			opacity: 1;
+			transition: .3s opacity .3s;
 		}
 	}
 

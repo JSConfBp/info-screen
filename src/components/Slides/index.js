@@ -44,7 +44,7 @@ const Slides = ({ stage }) => {
       () => next(slides.current),
       SLIDE_INTERVAL
     )
- 
+
     return () => {
       clearInterval(slideShowInterval.current)
     }
@@ -58,23 +58,6 @@ const Slides = ({ stage }) => {
           <SponsorImage image="tresorit" className="large" />
           <SponsorImage image="vacuumlabs" className="large" />
           <SponsorImage image="oracle" className="large" />
-        </div>
-      </div>
-      <div className="sponsors slideshow ">
-        <div className="sponsors-mid">
-          <SponsorImage image="blackrock" className="medium" />
-          <SponsorImage image="instructure" className="medium" />
-          <SponsorImage image="bonomi" className="medium" />
-          <SponsorImage image="supercharge" className="medium" />
-          <SponsorImage image="microsoft" className="medium" />
-          <SponsorImage image="risingstack" className="medium" />
-          <SponsorImage image="epam" className="medium" />
-          <SponsorImage image="mito" className="medium" />
-          <SponsorImage image="sinnerschrader" className="medium" />
-        </div>
-        <div className="sponsors-bottom">
-          <SponsorImage image="zalando" className="small" />
-          <SponsorImage image="snyk" className="small" />
         </div>
       </div>
 
@@ -107,6 +90,26 @@ const Slides = ({ stage }) => {
         <h1>password</h1>
       </div>
 
+
+      <div className="sponsors slideshow ">
+        <div className="sponsors-mid">
+          <SponsorImage image="blackrock" className="medium" />
+          <SponsorImage image="instructure" className="medium" />
+          <SponsorImage image="bonomi" className="medium" />
+          <SponsorImage image="supercharge" className="medium" />
+          <SponsorImage image="microsoft" className="medium" />
+          <SponsorImage image="risingstack" className="medium" />
+          <SponsorImage image="epam" className="medium" />
+          <SponsorImage image="mito" className="medium" />
+          <SponsorImage image="sinnerschrader" className="medium" />
+        </div>
+        <div className="sponsors-bottom">
+          <SponsorImage image="zalando" className="small" />
+          <SponsorImage image="snyk" className="small" />
+        </div>
+      </div>
+
+
       <div className="venue slideshow show">
         <VenueMap />
       </div>
@@ -117,7 +120,7 @@ const Slides = ({ stage }) => {
         <dl className="session-list">
           {stage.upcoming.map(session => (
             <React.Fragment key={session.topic}>
-              <dd>14:40</dd>
+              <dd>{ session.start }</dd>
               <dt>
                 {session.topic}
                 {session.name && (
