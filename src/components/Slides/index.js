@@ -38,13 +38,13 @@ const Slides = ({ stage }) => {
 
   useEffect(() => {
     slides.current = Array.from(document.querySelectorAll('.slideshow'))
-
+/*
     reset(slides.current)
     slideShowInterval.current = setInterval(
       () => next(slides.current),
       SLIDE_INTERVAL
     )
-
+  */
     return () => {
       clearInterval(slideShowInterval.current)
     }
