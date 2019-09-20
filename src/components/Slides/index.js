@@ -5,7 +5,7 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
-const SLIDE_INTERVAL = 3000
+const SLIDE_INTERVAL = 10000
 
 const reset = slides => {
   slides.forEach((slide, i) => {
@@ -38,13 +38,13 @@ const Slides = ({ stage }) => {
 
   useEffect(() => {
     slides.current = Array.from(document.querySelectorAll('.slideshow'))
-/*
+
     reset(slides.current)
     slideShowInterval.current = setInterval(
       () => next(slides.current),
       SLIDE_INTERVAL
     )
-  */
+
     return () => {
       clearInterval(slideShowInterval.current)
     }
