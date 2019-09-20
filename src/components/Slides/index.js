@@ -86,10 +86,9 @@ const Slides = ({ stage }) => {
             />
           </g>
         </svg>
+        <h1>AKVARIUM_FREE</h1>
         <h1>akvariumklub</h1>
-        <h1>password</h1>
       </div>
-
 
       <div className="sponsors slideshow ">
         <div className="sponsors-mid">
@@ -106,9 +105,9 @@ const Slides = ({ stage }) => {
         <div className="sponsors-bottom">
           <SponsorImage image="zalando" className="small" />
           <SponsorImage image="snyk" className="small" />
+          <SponsorImage image="outfittery" className="small" />
         </div>
       </div>
-
 
       <div className="venue slideshow show">
         <VenueMap />
@@ -120,7 +119,7 @@ const Slides = ({ stage }) => {
         <dl className="session-list">
           {stage.upcoming.map(session => (
             <React.Fragment key={session.topic}>
-              <dd>{ session.start }</dd>
+              <dd>{session.start}</dd>
               <dt>
                 {session.topic}
                 {session.name && (
