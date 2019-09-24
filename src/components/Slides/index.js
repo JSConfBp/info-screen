@@ -86,7 +86,7 @@ const Slides = ({ stage }) => {
             />
           </g>
         </svg>
-        <h1>AKVARIUM_FREE</h1>
+        <h1>AKVARIUM_FREE_TELEKOM</h1>
         <h1>akvariumklub</h1>
       </div>
 
