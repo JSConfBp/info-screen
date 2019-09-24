@@ -5,7 +5,7 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
-const SLIDE_INTERVAL = 10000
+const SLIDE_INTERVAL = 8000
 
 const reset = slides => {
   slides.forEach((slide, i) => {
