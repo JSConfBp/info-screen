@@ -8,6 +8,8 @@ import VenueMap from '../VenueMap'
 const SLIDE_INTERVAL = 10000
 
 const reset = slides => {
+  console.log('reset')
+
   slides.forEach((slide, i) => {
     slide.classList.remove('show')
 
@@ -37,9 +39,12 @@ const Slides = ({ stage }) => {
   const slideShowInterval = useRef(0)
 
   useEffect(() => {
+    console.log('useeffect init')
+
     slides.current = Array.from(document.querySelectorAll('.slideshow'))
 
     reset(slides.current)
+
     slideShowInterval.current = setInterval(
       () => next(slides.current),
       SLIDE_INTERVAL
@@ -48,7 +53,7 @@ const Slides = ({ stage }) => {
     return () => {
       clearInterval(slideShowInterval.current)
     }
-  }, [stage])
+  }, [false])
 
   return (
     <div className={classnames('mid-session-slides')}>
@@ -110,7 +115,7 @@ const Slides = ({ stage }) => {
         </div>
       </div>
 
-      <div className="venue slideshow show">
+      <div className="venue slideshow">
         <VenueMap />
       </div>
 
