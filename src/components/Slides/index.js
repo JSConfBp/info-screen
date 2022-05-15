@@ -7,7 +7,7 @@ import VenueMap from '../VenueMap'
 
 const getSlides = () => Array.from(document.querySelectorAll('.slideshow'))
 
-const reset = slides => {
+const reset = (slides) => {
   slides.forEach((slide, i) => {
     slide.classList.remove('show')
 
@@ -17,8 +17,8 @@ const reset = slides => {
   })
 }
 
-const next = slides => {
-  let index = slides.findIndex(elem => elem.classList.contains('show')) + 1
+const next = (slides) => {
+  let index = slides.findIndex((elem) => elem.classList.contains('show')) + 1
 
   if (index === slides.length) {
     index = 0
@@ -49,30 +49,32 @@ const Slides = ({ stage }) => {
 
   return (
     <div className={classnames('mid-session-slides')}>
-      <div className="sponsors slideshow show">
-        <div className="sponsors-top">
-          <SponsorImage image="mozilla" className="large" />
-          <SponsorImage image="tresorit" className="large" />
-          <SponsorImage image="vacuumlabs" className="large" />
-          <SponsorImage image="oracle" className="large" />
-        </div>
-        <div className="sponsors-mid">
-          <SponsorImage image="blackrock" className="medium" />
-          <SponsorImage image="instructure" className="medium" />
-          <SponsorImage image="bonomi" className="medium" />
-          <SponsorImage image="microsoft" className="medium" />
-          <SponsorImage image="risingstack" className="medium" />
-          <SponsorImage image="supercharge" className="medium" />
-          <SponsorImage image="sinnerschrader" className="medium" />
-          <SponsorImage image="epam" className="medium" />
-          <SponsorImage image="mito" className="medium" />
-        </div>
-        <div className="sponsors-bottom">
-          <SponsorImage image="zalando" className="small" />
-          <SponsorImage image="snyk" className="small" />
-        </div>
+
+      <div className="sponsors sponsors-platinum slideshow">
+        <SponsorImage image="wrike" className="large" />
+        <SponsorImage image="genesys" className="large" />
+        <SponsorImage image="oracle" className="large" />
+      </div>
+    
+      <div className="sponsors-gold sponsors slideshow show">
+        <SponsorImage image="xata" className="medium" />
+        <SponsorImage image="abbyy" className="medium" />
+        <SponsorImage image="epam" className="medium" />
+        <SponsorImage image="auth0" className="medium" />
+        <SponsorImage image="new-relic" className="medium" />
+        <SponsorImage image="stately" className="medium" />
+        <SponsorImage image="hasura" className="medium" />
+        <SponsorImage image="exadel" className="medium" />
+        <SponsorImage image="supercharge" className="medium" />
       </div>
 
+      <div className="sponsors-silver sponsors slideshow">
+        <SponsorImage image="this-dot" className="small" />
+        <SponsorImage image="hotjar" className="small" />
+        <SponsorImage image="talon-one" className="small" />
+        <SponsorImage image="twilio" className="small" />
+      </div>
+    
       <div className="wifi slideshow">
         <svg
           className="wifi-logo"
@@ -98,8 +100,8 @@ const Slides = ({ stage }) => {
             />
           </g>
         </svg>
+        <h1>AKVARIUM_FREE_TELEKOM</h1>
         <h1>akvariumklub</h1>
-        <h1>password</h1>
       </div>
 
       <div className="venue slideshow">
@@ -110,7 +112,7 @@ const Slides = ({ stage }) => {
         <h1>Coming up next</h1>
 
         <dl className="session-list">
-          {stage.upcoming.map(session => (
+          {stage.upcoming.map((session) => (
             <React.Fragment key={session.topic}>
               <dd>14:40</dd>
               <dt>

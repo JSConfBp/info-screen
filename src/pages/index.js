@@ -3,7 +3,6 @@ import classnames from 'classnames'
 import fetch from 'isomorphic-unfetch'
 
 import JSVisual from '../components/JSVisual'
-import CSSVisual from '../components/CSSVisual'
 import Slides from '../components/Slides'
 import './index.scss'
 const API_URL = 'https://stage-control.herokuapp.com/api/stage'
@@ -15,7 +14,7 @@ const emptyStage = {
   },
 }
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const [stage, setStage] = useState({
     upcoming: [],
   })
@@ -27,7 +26,7 @@ const IndexPage = props => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-    /* 
+    
     fetch(API_URL, {
       mode: 'no-cors',
       headers: {
@@ -37,7 +36,7 @@ const IndexPage = props => {
       .then(res => res.json())
       .then(res => console.log(res))
       .catch(e => console.error(e))
- */
+
 
     setStage({
       event: 'js',
@@ -87,10 +86,6 @@ const IndexPage = props => {
   return (
     <div className="info-screen">
       <Slides stage={stage} />
-
-      {stage && stage.event === 'css' && (
-        <CSSVisual presentation={stage.presentation} />
-      )}
       {stage && stage.event === 'js' && (
         <JSVisual presentation={stage.presentation} />
       )}

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'http://2015.jsconfbp.com/info-screen/',
-    title: 'Info Screen',
+    siteUrl: 'https://info-screen.jsconfbp.com',
+    title: 'JSConf Budapest Info Screen',
     description: '',
     keywords: '',
     twitter: '@jsconfbp'
@@ -19,6 +19,8 @@ module.exports = {
     },
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
+
+    `gatsby-plugin-image`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -29,20 +31,5 @@ module.exports = {
           }
       }
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`300`,`400`,`700`],
-          },
-          {
-            family: `Rubik`,
-            variants: [`300`,`400`,`700`]
-          },
-        ],
-      },
-    }
   ],
 }

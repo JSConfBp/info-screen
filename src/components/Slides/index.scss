@@ -2,18 +2,21 @@
 
 .mid-session-slides {
 	position: absolute;
-	z-index: 10;
-	width: 100vw;
-	height: 100vh;
+	
+    width: 100%;
+    height: 100%;
+    top: 0;
 
+	z-index: 10;
+	
 	.rotate90 & {
 		height: 100vw;
 		width: 100vh;
 	}
 
 	display: flex;
-	flex-direction: rows;
-	flex-wrap: wrap;
+	flex-flow: column wrap;
+	
 	justify-content: center;
 	align-items: center;
 
@@ -21,66 +24,69 @@
 
 	.sponsors {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-
+		top: 50%;
+		transform: translateY(-50%);
 		display: flex;
 		flex-flow: column;
-
 		justify-content: flex-start;
 		align-items: center;
 
-		&-top,
-		&-mid,
-		&-bottom {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: center;
+		&-platinum,
+		&-gold,
+		&-silver {
 			width: 90vw;
-			//padding-bottom: 3vh;
 
 			.rotate90 & {
 				width: 90vh;
 			}
 		}
 
-		&-top {
-			padding-top: 5vh;
-			height: 47vh;
-			flex-flow: column;
-
-
+		&-platinum {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-evenly;
+			height: 70vh;
 			.rotate90 & {
-				padding-top: 5vw;
-				height: 47vw;
+				height: 100vw;
 			}
 		}
-		&-mid {
-			width: 80vw;
-			height: 35vh;
+		&-gold {
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 2rem;
+
+			width: 70vw;
+			height: 70vh;
 
 			.rotate90 & {
 				width: 80vh;
 				height: 35vw;
 			}
+
 		}
-		&-bottom {
-			justify-content: center;
+		&-silver {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: space-evenly;
+			height: 40vh;
 		}
 
 		.large {
-			width: 54%;
+			width: 80%;
 			margin: 0vh;
+
+			&:nth-child(2) {
+				transform: translateY(-10%);
+			}
 		}
 		.medium {
-			width: 30%;
-			margin: 0% 1%;
+			&:last-child:nth-child(odd) {
+				transform: translateX(calc(50% + 2rem));
+			}
 		}
 		.small {
-			width: 12%;
-			margin: 1%;
+			width: 25%;
 		}
 	}
 
@@ -108,10 +114,9 @@
 		flex-direction: column;
 
 		h1 {
-			font-size: 5vh;
+			font-size: 2rem;
 			margin: 0 0 5%;
 			letter-spacing: .6vw;
-
 
 			.rotate90 & {
 				font-size: 5vw;

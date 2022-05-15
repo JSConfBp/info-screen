@@ -20,7 +20,7 @@ const SponsorImage = ({ image, className = '' }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return data.source.edges
         .filter(({ node }) => {
           const { src } = node.childImageSharp.fluid
