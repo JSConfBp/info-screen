@@ -6,7 +6,6 @@ module.exports = {
     keywords: '',
     twitter: '@jsconfbp'
   },
-  pathPrefix: `/info-screen`,
   plugins: [
     'gatsby-plugin-sass',
     {
