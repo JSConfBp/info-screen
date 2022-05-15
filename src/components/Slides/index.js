@@ -5,7 +5,13 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
-const getSlides = () => Array.from(document.querySelectorAll('.slideshow'))
+const getSlides = () => {
+  if (typeof document != 'undefined'){
+    return Array.from(document.querySelectorAll('.slideshow'))
+  } 
+
+  return [];
+}
 
 const reset = (slides) => {
   slides.forEach((slide, i) => {
@@ -37,6 +43,9 @@ const Slides = ({ stage }) => {
   const slideShowInterval = useRef(0)
 
   useEffect(() => {
+    if (!document) {
+      return
+    }
     slides.current = getSlides()
 
     reset(slides.current)
@@ -49,13 +58,12 @@ const Slides = ({ stage }) => {
 
   return (
     <div className={classnames('mid-session-slides')}>
-
       <div className="sponsors sponsors-platinum slideshow">
         <SponsorImage image="wrike" className="large" />
         <SponsorImage image="genesys" className="large" />
         <SponsorImage image="oracle" className="large" />
       </div>
-    
+
       <div className="sponsors-gold sponsors slideshow show">
         <SponsorImage image="xata" className="medium" />
         <SponsorImage image="abbyy" className="medium" />
@@ -74,7 +82,7 @@ const Slides = ({ stage }) => {
         <SponsorImage image="talon-one" className="small" />
         <SponsorImage image="twilio" className="small" />
       </div>
-    
+
       <div className="wifi slideshow">
         <svg
           className="wifi-logo"

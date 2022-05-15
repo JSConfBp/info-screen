@@ -4,9 +4,9 @@ import './index.scss'
 
 const JSVisual = ({ presentation, midSlide }) => {
   return (
-    <> 
-      <div className='topleft'></div> 
-      <div className='bottomright'></div> 
+    <>
+      <div className="topleft"></div>
+      <div className="bottomright"></div>
     </>
   )
 }

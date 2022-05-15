@@ -26,17 +26,15 @@ const IndexPage = (props) => {
       document.querySelector('body').classList.add('rotate90')
     }
 
-    
     fetch(API_URL, {
       mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(e => console.error(e))
-
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((e) => console.error(e))
 
     setStage({
       event: 'js',
