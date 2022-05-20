@@ -7,7 +7,6 @@ module.exports = {
     twitter: '@jsconfbp'
   },
   plugins: [
-    'gatsby-plugin-sass',
     {
       resolve:`gatsby-source-filesystem`,
       options:{
@@ -16,9 +15,9 @@ module.exports = {
         ignore: [ `**/\.*` ], // ignore files starting with a dot
       }
     },
+    'gatsby-plugin-sass',
     'gatsby-plugin-force-trailing-slashes',
     'gatsby-plugin-react-helmet',
-
     `gatsby-plugin-image`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
