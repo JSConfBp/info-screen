@@ -122,7 +122,7 @@ const Slides = ({ stage }) => {
         <dl className="session-list">
           {stage.upcoming.map((session) => (
             <React.Fragment key={session.topic}>
-              <dd>14:40</dd>
+              <dd>{session.start}</dd>
               <dt>
                 {session.topic}
                 {session.name && (
