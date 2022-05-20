@@ -6,11 +6,11 @@ import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
 const getSlides = () => {
-  if (typeof document != 'undefined'){
+  if (typeof document != 'undefined') {
     return Array.from(document.querySelectorAll('.slideshow'))
-  } 
+  }
 
-  return [];
+  return []
 }
 
 const reset = (slides) => {
