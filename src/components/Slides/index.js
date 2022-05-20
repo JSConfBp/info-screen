@@ -49,7 +49,7 @@ const Slides = ({ stage }) => {
     slides.current = getSlides()
 
     reset(slides.current)
-    // slideShowInterval.current = setInterval(() => next(slides.current), 3000)
+    slideShowInterval.current = setInterval(() => next(slides.current), 3000)
 
     return () => {
       clearInterval(slideShowInterval.current)
