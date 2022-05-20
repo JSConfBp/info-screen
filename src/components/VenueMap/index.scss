@@ -1,7 +1,43 @@
+@import '../../colors.scss';
+
+.map-container {
+    width: 90%;
+    height: 100%;
+    top: 50%;
+
+    border-radius: 6px;
+    padding: {
+        top: 18px;
+        right: 12px;
+        bottom: 18px;
+        left: 12px;
+	}
+	height: 72vh;
+	position: absolute;
+	overflow: hidden;
+    transform: translateY(-50%);
+}
+
 .venue-map {
 	position: absolute;
-	width: 120%;
-	height: 100%;
-	top: 0;
-	transform: translate(-20%, 0);
+    width: 100%;
+    height: 133%;
+    top: -19%;
+    left: 0;
+}
+
+.st0 {
+	fill:#000;
+}
+
+.icon {
+	fill: $color-rebeccapurple;
+}
+
+.icon.exit {
+	fill: $color-green;
+}
+
+.st1 {
+	fill:none;
 }

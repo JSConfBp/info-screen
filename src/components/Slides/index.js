@@ -49,7 +49,7 @@ const Slides = ({ stage }) => {
     slides.current = getSlides()
 
     reset(slides.current)
-    slideShowInterval.current = setInterval(() => next(slides.current), 3000)
+    // slideShowInterval.current = setInterval(() => next(slides.current), 3000)
 
     return () => {
       clearInterval(slideShowInterval.current)
@@ -64,7 +64,7 @@ const Slides = ({ stage }) => {
         <SponsorImage image="oracle" className="large" />
       </div>
 
-      <div className="sponsors-gold sponsors slideshow show">
+      <div className="sponsors-gold sponsors slideshow">
         <SponsorImage image="xata" className="medium" />
         <SponsorImage image="abbyy" className="medium" />
         <SponsorImage image="epam" className="medium" />
@@ -112,7 +112,7 @@ const Slides = ({ stage }) => {
         <h1>akvariumklub</h1>
       </div>
 
-      <div className="venue slideshow">
+      <div className="venue slideshow show">
         <VenueMap />
       </div>
 

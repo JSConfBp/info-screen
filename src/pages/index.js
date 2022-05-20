@@ -27,7 +27,6 @@ const IndexPage = (props) => {
     }
 
     fetch(API_URL, {
-      
       headers: {
         'Content-Type': 'application/json',
       },
@@ -36,7 +35,6 @@ const IndexPage = (props) => {
       .then((res) => setStage(res))
       .catch((e) => console.error(e))
 
-
     return () => {}
   }, [false])
 
@@ -44,7 +42,6 @@ const IndexPage = (props) => {
     <div className="info-screen">
       <Slides stage={stage} />
       <JSVisual presentation={stage.presentation} />
-      
     </div>
   )
 }

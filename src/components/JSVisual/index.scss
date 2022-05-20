@@ -4,11 +4,11 @@
 .bottomright {
 	position: absolute;
 	width: 50vw;
-	height: 50vh;
+	height: 100vh;
 
 	.rotate90 & {
 		width: 50vh;
-		height: 50vw;
+		height: 100vw;
 	}
 }
 
@@ -16,7 +16,7 @@
 	background-color: $color-rebeccapurple;
 	top: 0;
 	left: 0;
-	transform: rotate(13deg) translate(-16.9rem, 2.7rem);
+	transform: rotate(13deg) translate(-19.9rem, 3.7rem);
 
 	.rotate90 & {
 		transform: rotate(13deg) translate(-26.3rem, 4.3rem);
@@ -27,7 +27,7 @@
 	background-color: $color-orange;
 	bottom: 0;
 	right:0;
-	transform: rotate(13deg) translate(16.1rem, -2.7rem);
+	transform: rotate(13deg) translate(19.1rem, -3.5rem);
 
 
 	.rotate90 & {
