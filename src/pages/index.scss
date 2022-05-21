@@ -24,6 +24,7 @@ html, body {
 
 body.rotate90 {
 	transform: rotate(90deg);
+	overflow: hidden;
 }
 
 .event-js {

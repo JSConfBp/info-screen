@@ -46,47 +46,70 @@
 			flex-flow: column wrap;
 			justify-content: space-evenly;
 			height: 70vh;
+
 			.rotate90 & {
 				height: 100vw;
 			}
 		}
-		&-gold {
 
+		&-gold {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 2rem;
+			justify-items: center;
 
 			width: 70vw;
 			height: 70vh;
 
 			.rotate90 & {
 				width: 80vh;
-				height: 35vw;
+				height: 60vw;
 			}
 
 		}
 		&-silver {
-			display: flex;
-			flex-flow: column wrap;
+			display: grid;
 			justify-content: space-evenly;
 			height: 40vh;
+			justify-items: center;
+
+			.rotate90 & {
+				width: 80vh;
+				height: 30vw;
+				grid-gap: 1vw;
+			}
 		}
 
 		.large {
 			width: 80%;
 			margin: 0vh;
 
-			&:nth-child(2) {
-				transform: translateY(-10%);
-			}
+			&:nth-child(1) { transform: translateY(60%); }
+			&:nth-child(3) { transform: translateY(-60%); }
 		}
+
 		.medium {
+			width: 28vw;
+			height: 7vh;
+			margin: 0vh;
+			
 			&:last-child:nth-child(odd) {
 				transform: translateX(calc(50% + 2rem));
 			}
+
+			.rotate90 & {
+				width: 34vh;
+				height: 10vw;
+			}
 		}
+
 		.small {
 			width: 25%;
+
+			.rotate90 & {
+				width: 26vh;
+				height: 10vw;
+			}
 		}
 	}
 
@@ -114,12 +137,12 @@
 		flex-direction: column;
 
 		h1 {
-			font-size: 2rem;
+			font-size: 4rem;
 			margin: 0 0 5%;
 			letter-spacing: .6vw;
 
 			.rotate90 & {
-				font-size: 5vw;
+				font-size: 5vh;
 				letter-spacing: .6vh;
 			}
 		}
@@ -140,12 +163,12 @@
 		h1 {
 			width: 90%;
 			font-size: 4vh;
-			padding-left: 18vw;
+			text-align: center;
 			box-sizing: border-box;
 
 			.rotate90 & {
 				font-size: 4vw;
-				padding-left: 18vh;
+				text-align: center;
 			}
 		}
 	}

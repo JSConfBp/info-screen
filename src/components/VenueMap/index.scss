@@ -1,21 +1,20 @@
 @import '../../colors.scss';
 
 .map-container {
-    width: 90%;
+    width: 100%;
     height: 100%;
     top: 50%;
 
-    border-radius: 6px;
-    padding: {
-        top: 18px;
-        right: 12px;
-        bottom: 18px;
-        left: 12px;
-	}
 	height: 72vh;
 	position: absolute;
 	overflow: hidden;
     transform: translateY(-50%);
+
+
+    .rotate90 & {
+        height: 120vh;
+        transform: translate(4%, -50%);
+    }
 }
 
 .venue-map {

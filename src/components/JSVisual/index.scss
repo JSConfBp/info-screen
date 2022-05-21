@@ -13,24 +13,24 @@
 }
 
 .topleft {
-	background-color: $color-rebeccapurple;
+	background-color: $color-orange;
 	top: 0;
 	left: 0;
-	transform: rotate(13deg) translate(-19.9rem, 3.7rem);
-
+	transform: rotate(13deg) translate(-34.9rem, 5.7rem);
+	
 	.rotate90 & {
-		transform: rotate(13deg) translate(-26.3rem, 4.3rem);
+		transform: rotate(13deg) translate(-36.3rem, 5.3rem);
 	}
 }
 
 .bottomright {
-	background-color: $color-orange;
+	background-color: $color-lightpurple;
 	bottom: 0;
 	right:0;
-	transform: rotate(13deg) translate(19.1rem, -3.5rem);
+	transform: rotate(13deg) translate(34.1rem, -5.5rem);
 
 
 	.rotate90 & {
-		transform: rotate(13deg) translate(27rem, -4.5rem);
+		transform: rotate(13deg) translate(36rem, -5.3rem);
 	}
 }

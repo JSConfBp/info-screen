@@ -5,6 +5,24 @@ import './index.scss'
 import SponsorImage from '../SponsorImage'
 import VenueMap from '../VenueMap'
 
+import Abbyy from '../../../sponsors/abbyy.inline.svg'
+import Auth0 from '../../../sponsors/auth0.inline.svg'
+import Epam from '../../../sponsors/epam.inline.svg'
+import Exadel from '../../../sponsors/exadel.inline.svg'
+import Genesys from '../../../sponsors/genesys.inline.svg'
+import Hasura from '../../../sponsors/hasura.inline.svg'
+import Hotjar from '../../../sponsors/hotjar.inline.svg'
+import Littledata from '../../../sponsors/littledata.inline.svg'
+import Newrelic from '../../../sponsors/newrelic.inline.svg'
+import Oracle from '../../../sponsors/oracle.inline.svg'
+import Stately from '../../../sponsors/stately.inline.svg'
+import Supercharge from '../../../sponsors/supercharge.inline.svg'
+import TalonOne from '../../../sponsors/talon-one.inline.svg'
+import ThisDot from '../../../sponsors/this-dot.inline.svg'
+import Twilio from '../../../sponsors/twilio.inline.svg'
+import Wrike from '../../../sponsors/wrike.inline.svg'
+import Xata from '../../../sponsors/xata.inline.svg'
+
 const getSlides = () => {
   if (typeof document != 'undefined') {
     return Array.from(document.querySelectorAll('.slideshow'))
@@ -58,32 +76,33 @@ const Slides = ({ stage }) => {
 
   return (
     <div className={classnames('mid-session-slides')}>
-      <div className="sponsors sponsors-platinum slideshow">
-        <SponsorImage image="wrike" className="large" />
-        <SponsorImage image="genesys" className="large" />
-        <SponsorImage image="oracle" className="large" />
+      <div className="sponsors sponsors-platinum slideshow ">
+        <Wrike className="large" />
+        <Genesys className="large" />
+        <Oracle className="large" />
       </div>
 
-      <div className="sponsors-gold sponsors slideshow">
-        <SponsorImage image="xata" className="medium" />
-        <SponsorImage image="abbyy" className="medium" />
-        <SponsorImage image="epam" className="medium" />
-        <SponsorImage image="auth0" className="medium" />
-        <SponsorImage image="new-relic" className="medium" />
-        <SponsorImage image="stately" className="medium" />
-        <SponsorImage image="hasura" className="medium" />
-        <SponsorImage image="exadel" className="medium" />
-        <SponsorImage image="supercharge" className="medium" />
+      <div className="sponsors-gold sponsors slideshow ">
+        <Xata className="medium" />
+        <Abbyy className="medium" />
+        <Epam className="medium" />
+        <Auth0 className="medium" />
+        <Newrelic className="medium" />
+        <Stately className="medium" />
+        <Exadel className="medium" />
+        <Hasura className="medium" />
+        <Supercharge className="medium" />
+        <Littledata className="medium" />
       </div>
 
-      <div className="sponsors-silver sponsors slideshow">
-        <SponsorImage image="this-dot" className="small" />
-        <SponsorImage image="hotjar" className="small" />
-        <SponsorImage image="talon-one" className="small" />
-        <SponsorImage image="twilio" className="small" />
+      <div className="sponsors-silver sponsors slideshow show">
+        <Hotjar className="small" />
+        <TalonOne className="small" />
+        <ThisDot className="small" />
+        <Twilio className="small" />
       </div>
 
-      <div className="wifi slideshow">
+      <div className="wifi slideshow ">
         <svg
           className="wifi-logo"
           version="1.1"
@@ -112,7 +131,7 @@ const Slides = ({ stage }) => {
         <h1>akvariumklub</h1>
       </div>
 
-      <div className="venue slideshow show">
+      <div className="venue slideshow">
         <VenueMap />
       </div>
 
