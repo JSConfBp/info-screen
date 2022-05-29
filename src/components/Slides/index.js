@@ -67,7 +67,7 @@ const Slides = ({ stage }) => {
     slides.current = getSlides()
 
     reset(slides.current)
-    slideShowInterval.current = setInterval(() => next(slides.current), 3000)
+    slideShowInterval.current = setInterval(() => next(slides.current), 4400)
 
     return () => {
       clearInterval(slideShowInterval.current)
@@ -82,15 +82,27 @@ const Slides = ({ stage }) => {
         <Oracle className="large" />
       </div>
 
+      <div className="sponsors-perks sponsors slideshow ">
+        <div className="perk">
+          <h4>Scholarship Support & Closed Captions by</h4>
+          <Abbyy className="medium" />
+        </div>
+        <div className="perk">
+          <h4>Day One Afterparty by</h4>
+          <Auth0 className="medium" />
+        </div>
+        <div className="perk">
+          <h4>Sketchnotes by</h4>
+          <Hasura className="medium" />
+        </div>
+      </div>
+
       <div className="sponsors-gold sponsors slideshow ">
         <Xata className="medium" />
-        <Abbyy className="medium" />
         <Epam className="medium" />
-        <Auth0 className="medium" />
         <Newrelic className="medium" />
         <Stately className="medium" />
         <Exadel className="medium" />
-        <Hasura className="medium" />
         <Supercharge className="medium" />
         <Littledata className="medium" />
       </div>
